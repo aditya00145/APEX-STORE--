@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="100%" height="100%">
+  <defs>
+    <radialGradient id="leg-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#201f28"/>
+      <stop offset="60%" stop-color="#121216"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </radialGradient>
+    <linearGradient id="leg-frame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#484d59"/>
+      <stop offset="50%" stop-color="#2c3038"/>
+      <stop offset="100%" stop-color="#181a1f"/>
+    </linearGradient>
+    <linearGradient id="leg-screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="leg-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#0066ff"/>
+    </linearGradient>
+    <filter id="leg-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="url(#leg-bg)"/>
+  <ellipse cx="320" cy="525" rx="220" ry="22" fill="#000" opacity="0.6" filter="blur(14px)"/>
+  
+  <!-- 8.8-inch Gaming Tablet (Portrait/Landscape Gaming orientation) -->
+  <g transform="translate(145, 100)" filter="url(#leg-shadow)">
+    <!-- Chassis -->
+    <rect x="0" y="0" width="350" height="440" rx="20" fill="url(#leg-frame)" stroke="#586070" stroke-width="1.5"/>
+    <!-- Glass Bezel -->
+    <rect x="12" y="12" width="326" height="416" rx="14" fill="#0c0e12"/>
+    <!-- Active Display Area -->
+    <rect x="18" y="22" width="314" height="396" rx="8" fill="url(#leg-screen)"/>
+    
+    <!-- Gaming HUD / Graphics -->
+    <path d="M 20 280 L 120 220 L 220 260 L 330 180 L 330 416 L 20 416 Z" fill="url(#leg-cyan)" opacity="0.35"/>
+    
+    <!-- Center Emblem & Title -->
+    <polygon points="175,150 205,195 190,195 190,230 160,230 160,195 145,195" fill="url(#leg-cyan)"/>
+    <text x="175" y="270" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="6" text-anchor="middle">LEGION</text>
+    <text x="175" y="295" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="600" fill="#00f5ff" letter-spacing="3" text-anchor="middle">GAMING TAB GEN 2</text>
+    <text x="175" y="325" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">8.8" QHD+ 144Hz · Snapdragon 8+ Gen 1</text>
+    
+    <!-- Dual USB-C Port indicator on edge -->
+    <rect x="-3" y="180" width="4" height="24" rx="2" fill="#00f5ff"/>
+    <rect x="165" y="439" width="20" height="3" rx="1.5" fill="#00f5ff"/>
+  </g>
+</svg>

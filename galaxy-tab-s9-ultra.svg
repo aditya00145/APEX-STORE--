@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="100%" height="100%">
+  <defs>
+    <radialGradient id="tab-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1e222a"/>
+      <stop offset="60%" stop-color="#111317"/>
+      <stop offset="100%" stop-color="#090a0c"/>
+    </radialGradient>
+    <linearGradient id="tab-bezel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a3f47"/>
+      <stop offset="50%" stop-color="#22252a"/>
+      <stop offset="100%" stop-color="#141619"/>
+    </linearGradient>
+    <linearGradient id="tab-screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="35%" stop-color="#172a45"/>
+      <stop offset="70%" stop-color="#301c42"/>
+      <stop offset="100%" stop-color="#4a154b"/>
+    </linearGradient>
+    <linearGradient id="tab-pen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#40454f"/>
+      <stop offset="50%" stop-color="#282b32"/>
+      <stop offset="100%" stop-color="#181a1e"/>
+    </linearGradient>
+    <linearGradient id="tab-art" x1="20%" y1="20%" x2="80%" y2="80%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="50%" stop-color="#9b51e0"/>
+      <stop offset="100%" stop-color="#ff007a"/>
+    </linearGradient>
+    <filter id="tab-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="url(#tab-bg)"/>
+  <ellipse cx="320" cy="510" rx="260" ry="24" fill="#000" opacity="0.6" filter="blur(16px)"/>
+  
+  <!-- Tablet Body (14.6" Wide Aspect) -->
+  <g transform="translate(70, 140)" filter="url(#tab-shadow)">
+    <!-- Chassis -->
+    <rect x="0" y="0" width="460" height="310" rx="14" fill="url(#tab-bezel)" stroke="#505663" stroke-width="1.5"/>
+    <!-- Screen Glass -->
+    <rect x="10" y="10" width="440" height="290" rx="8" fill="url(#tab-screen)"/>
+    
+    <!-- Screen Content / AMOLED Art -->
+    <path d="M 10 180 C 120 120, 220 280, 450 110 L 450 300 L 10 300 Z" fill="url(#tab-art)" opacity="0.75"/>
+    <circle cx="280" cy="180" r="70" fill="#00f2fe" opacity="0.3" filter="blur(20px)"/>
+    <circle cx="360" cy="220" r="60" fill="#ff0844" opacity="0.4" filter="blur(25px)"/>
+    
+    <!-- Camera Notch Top -->
+    <rect x="220" y="10" width="20" height="7" rx="3.5" fill="#141619"/>
+    <circle cx="230" cy="13.5" r="2" fill="#00f2fe" opacity="0.6"/>
+    
+    <!-- Samsung Logo subtle watermark on screen -->
+    <text x="230" y="160" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="4" text-anchor="middle" opacity="0.9">SAMSUNG</text>
+    <text x="230" y="185" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="12" font-weight="500" fill="#90a4ae" letter-spacing="2" text-anchor="middle" opacity="0.9">Galaxy Tab S9 Ultra</text>
+    <text x="230" y="205" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10" fill="#64ffda" letter-spacing="1" text-anchor="middle" opacity="0.9">14.6" 120Hz Dynamic AMOLED 2X</text>
+  </g>
+  
+  <!-- S-Pen Stylus -->
+  <g transform="translate(545, 155) rotate(12)" filter="url(#tab-shadow)">
+    <rect x="0" y="0" width="14" height="260" rx="7" fill="url(#tab-pen)" stroke="#454b57" stroke-width="1"/>
+    <!-- Button -->
+    <rect x="3" y="110" width="8" height="30" rx="3" fill="#1e2126" stroke="#606775" stroke-width="0.8"/>
+    <!-- Tip -->
+    <path d="M 2 260 L 7 282 L 12 260 Z" fill="#111317"/>
+    <!-- Top accent -->
+    <rect x="2" y="4" width="10" height="4" rx="2" fill="#00d2ff"/>
+  </g>
+</svg>

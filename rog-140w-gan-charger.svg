@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="100%" height="100%">
+  <defs>
+    <radialGradient id="chg-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#241b1d"/>
+      <stop offset="60%" stop-color="#140f11"/>
+      <stop offset="100%" stop-color="#0a0708"/>
+    </radialGradient>
+    <linearGradient id="chg-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2c2d33"/>
+      <stop offset="50%" stop-color="#1d1e22"/>
+      <stop offset="100%" stop-color="#121316"/>
+    </linearGradient>
+    <linearGradient id="rog-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a35"/>
+      <stop offset="100%" stop-color="#b30018"/>
+    </linearGradient>
+    <filter id="chg-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+  <rect width="640" height="640" fill="url(#chg-bg)"/>
+  <ellipse cx="320" cy="510" rx="190" ry="22" fill="#000" opacity="0.75" filter="blur(16px)"/>
+  
+  <!-- 140W GaN Adapter Block -->
+  <g transform="translate(180, 110)" filter="url(#chg-shadow)">
+    <!-- Main Block -->
+    <rect x="0" y="0" width="280" height="370" rx="24" fill="url(#chg-body)" stroke="#42454e" stroke-width="1.8"/>
+    
+    <!-- ROG Slash Geometric Facet -->
+    <path d="M 0 110 L 280 200 L 280 370 L 0 370 Z" fill="#18191d" opacity="0.6"/>
+    <line x1="0" y1="110" x2="280" y2="200" stroke="#ff1a35" stroke-width="2" opacity="0.8"/>
+    
+    <!-- ROG Eye Logo -->
+    <g transform="translate(140, 75) scale(0.9)">
+      <path d="M -35 -15 C -20 -30 20 -30 35 -15 C 20 -5 10 10 0 25 C -10 10 -20 -5 -35 -15 Z" fill="url(#rog-red)"/>
+      <polygon points="-5,-12 18,-12 25,-4 -2,-4" fill="#ffffff" opacity="0.9"/>
+    </g>
+    
+    <!-- Text Labels -->
+    <text x="140" y="135" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="14" font-weight="800" fill="#ffffff" letter-spacing="4" text-anchor="middle">REPUBLIC OF GAMERS</text>
+    <text x="140" y="165" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="24" font-weight="900" fill="#ff1a35" letter-spacing="2" text-anchor="middle">140W GaN</text>
+    <text x="140" y="185" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" font-size="10" fill="#a0a6b5" letter-spacing="2" text-anchor="middle">FAST CHARGER · PD 3.1</text>
+    
+    <!-- Ports Panel (Bottom) -->
+    <rect x="40" y="225" width="200" height="115" rx="14" fill="#0d0e11" stroke="#2d3038" stroke-width="1"/>
+    
+    <!-- USB-C 1 -->
+    <rect x="65" y="245" width="45" height="16" rx="8" fill="#1a1c22" stroke="#ff1a35" stroke-width="1.2"/>
+    <text x="87" y="275" font-family="monospace" font-size="9" fill="#88909f" text-anchor="middle">Type-C 1</text>
+    
+    <!-- USB-C 2 -->
+    <rect x="170" y="245" width="45" height="16" rx="8" fill="#1a1c22" stroke="#ff1a35" stroke-width="1.2"/>
+    <text x="192" y="275" font-family="monospace" font-size="9" fill="#88909f" text-anchor="middle">Type-C 2</text>
+    
+    <!-- USB-A -->
+    <rect x="105" y="295" width="70" height="20" rx="4" fill="#1a1c22" stroke="#505664" stroke-width="1"/>
+    <rect x="110" y="300" width="60" height="10" rx="2" fill="#ff5500"/>
+    <text x="140" y="330" font-family="monospace" font-size="8" fill="#88909f" text-anchor="middle">USB-A QC 3.0</text>
+  </g>
+</svg>
