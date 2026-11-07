@@ -31,7 +31,7 @@
 
   function productCard(p) {
     var href = productUrl(p);
-    var img = p.img ? '<img src="' + resolveImg(p.img) + '" alt="' + p.brand + ' ' + p.name + '" loading="lazy" decoding="async" onerror="this.remove()">' : '';
+    var img = p.img ? '<img src="' + resolveImg(p.img) + '" alt="' + p.brand + ' ' + p.name + '" loading="lazy" decoding="async" onerror="if(!this.dataset.retry){this.dataset.retry=1;this.src=this.src.replace(/\/images\//,'/');}else{this.remove();}">' : '';
     var reviewCount = Math.floor((p.price % 47) + 15);
     var ratingVal = p.rating || 4.8;
     var rating = starsHTML(ratingVal) + '<span>' + ratingVal.toFixed(1) + ' (' + reviewCount + ')</span>';
@@ -80,7 +80,7 @@
     } else {
       cartBody.innerHTML = '<ul class="items">' + c.map(function (i) {
         return '<li class="item">' +
-          '<div class="cthumb"><span>' + i.name + '</span>' + (i.img ? '<img src="' + resolveImg(i.img) + '" alt="' + i.name + '" onerror="this.remove()">' : '') + '</div>' +
+          '<div class="cthumb"><span>' + i.name + '</span>' + (i.img ? '<img src="' + resolveImg(i.img) + '" alt="' + i.name + '" onerror="if(!this.dataset.retry){this.dataset.retry=1;this.src=this.src.replace(/\/images\//,'/');}else{this.remove();}">' : '') + '</div>' +
           '<div>' +
             '<p class="item-name">' + i.name + '</p>' +
             '<p class="item-price">' + (i.spec || '') + '</p>' +

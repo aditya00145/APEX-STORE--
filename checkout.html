@@ -380,7 +380,7 @@
     list.innerHTML = cart.map(function (i) {
       count += i.qty;
       return '<li class="item">' +
-        '<div class="thumb" data-img="' + (i.img || '') + '"><span>' + i.name + '</span>' + (i.img ? '<img src="' + i.img + '" alt="' + i.name + '" onerror="this.remove()">' : '') + '</div>' +
+        '<div class="thumb" data-img="' + (i.img || '') + '"><span>' + i.name + '</span>' + (i.img ? '<img src="' + i.img + '" alt="' + i.name + '" onerror="if(!this.dataset.retry){this.dataset.retry=1;this.src=this.src.replace(/\/images\//,'/');}else{this.remove();}">' : '') + '</div>' +
         '<div>' +
           '<p class="item-name">' + i.name + '</p>' +
           '<p class="item-price">' + fmt(i.price) + ' each</p>' +
